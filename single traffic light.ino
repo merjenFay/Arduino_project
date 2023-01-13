@@ -1,8 +1,8 @@
 /*
   1. RED_LED on for X seconds (others off)
   2. Be ready state, on for 1 second
-  3. Yellow_LED ON for 1 second (others off)
-  4. Green_LED ON for X seconds (others off)
+  3. Green_LED ON for X seconds (others off)
+  4. Yellow_LED ON for 1 second (others off)
   5. repeat
 */
 
