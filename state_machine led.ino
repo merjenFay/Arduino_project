@@ -39,20 +39,16 @@ void setup() {
 
   sei();
 
-  /* Begin the program in OFF state*/
+  /* Begin the program in ON state*/
   ProgramState = STATE_ON;
 
-  /* Initialize serial communication between PC and board with 
-  transmission speed = 9600 bits/second */
+  
   
 }
 
 void loop() {
-  /* declare a local variable, initialized with an undefined state */
   
-  
-
-  switch (ProgramState)
+ switch (ProgramState)
   {
     case STATE_ON:
       {
