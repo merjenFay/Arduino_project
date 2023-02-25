@@ -54,6 +54,14 @@ void readDiagnosticServiceRequest(void)
     {
       state_counter = 0;
       ProgramState = STATE_SERVICE;
+      PORTD &= RESET_PIN(3); //N-S GREEN
+      PORTD &= RESET_PIN(4); // N-S PEDESTRIAN GREEN
+      PORTB &= RESET_PIN(0); //E-W GREEN
+      PORTB &= RESET_PIN(1); // E-W PEDESSTRIAN GREEN
+      PORTB &= RESET_PIN(4); //N-S RED
+      PORTB &= RESET_PIN(5); //N-S PEDESTRIAN RED
+      PORTD &= RESET_PIN(5); //E-W RED
+      PORTD &= RESET_PIN(6); // E-W PEDESTRIAN RED
     }
   }
 }
@@ -81,8 +89,10 @@ void service(void)
 { Serial.println(counter);
   if (counter < 1)
   {
+
     PORTD |= SET_PIN(2); // N-S YELLOW
     PORTD |= SET_PIN(7); // E-W YELLOW
+
   }
   else if (counter < 2)
   {
